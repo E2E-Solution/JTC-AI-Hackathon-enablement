@@ -20,17 +20,17 @@ export default function Home() {
               transition={{ duration: 0.7 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                🎯 Procurement Command Center
+                🚀 Project Ignite: Procurement Command Centre
               </h1>
               <p className="text-xl md:text-2xl mb-4 font-semibold text-blue-200">
                 Mission: Ignite the Best Vendor Match
               </p>
               <p className="text-lg md:text-xl mb-6 text-blue-100 leading-relaxed">
-                Build an intelligent procurement system that matches vendors with precision, 
-                automates RFP workflows, and delivers data-driven insights.
+                Build an intelligent procurement system that matches vendors with precision ✅, 
+                automates RFP workflows 📧, and delivers data-driven insights 📊.
               </p>
               <p className="text-base md:text-lg mb-8 text-blue-50 leading-relaxed">
-                You're Mission Control. Orchestrate the flow, wire the automations, 
+                You're Mission Control 🎛️. Orchestrate the flow, wire the automations, 
                 and give every procurement decision the intelligence it deserves.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -78,7 +78,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12"
+            className="max-w-6xl mx-auto bg-white rounded-lg shadow-md p-6 border border-gray-100"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 text-center">
               Mission Briefing
@@ -111,7 +111,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12"
+            className="max-w-6xl mx-auto bg-white rounded-lg shadow-md p-6 border border-gray-100"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 text-center">
               Meet Sarah – Our Procurement Manager on Mission Critical
@@ -158,7 +158,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="max-w-6xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12"
+            className="max-w-6xl mx-auto"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 text-center">
               Meet Procurement Command Center – Your AI-Powered Mission Control
@@ -168,33 +168,51 @@ export default function Home() {
               decision through AI-powered matching, automated workflows, and data-driven insights.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">🔍 Vendor Scout Agent</h3>
-                <p className="text-gray-600 mb-2 font-medium">AI-powered vendor matching with knowledge base</p>
-                <p className="text-gray-700 text-sm">
+              <motion.div
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.2 }}
+                className="bg-white rounded-lg shadow-md p-6 border border-gray-100"
+              >
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">🔍 Vendor Scout Agent</h3>
+                <p className="text-gray-700 mb-2">
+                  AI-powered vendor matching with knowledge base
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed">
                   Leverage AI models and knowledge bases to match vendors with precision. 
                   The agent understands requirements, searches vendor profiles, and delivers 
                   ranked recommendations with confidence scores.
                 </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">📧 Mission Comms</h3>
-                <p className="text-gray-600 mb-2 font-medium">Logic Apps workflows: email RFP + approvals</p>
-                <p className="text-gray-700 text-sm">
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.2 }}
+                className="bg-white rounded-lg shadow-md p-6 border border-gray-100"
+              >
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">📧 Mission Comms</h3>
+                <p className="text-gray-700 mb-2">
+                  Logic Apps workflows: email RFP + approvals
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed">
                   Automate RFP distribution via email, track responses, and manage approval 
                   workflows. Logic Apps orchestrates the entire communication pipeline, 
                   ensuring nothing falls through the cracks.
                 </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">📊 Mission Debrief</h3>
-                <p className="text-gray-600 mb-2 font-medium">Code Interpreter: Python analysis + visualizations</p>
-                <p className="text-gray-700 text-sm">
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.2 }}
+                className="bg-white rounded-lg shadow-md p-6 border border-gray-100"
+              >
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">📊 Mission Debrief</h3>
+                <p className="text-gray-700 mb-2">
+                  Code Interpreter: Python analysis + visualizations
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed">
                   Analyze vendor data, generate insights, and create visualizations using 
                   Python. The Code Interpreter transforms raw procurement data into actionable 
                   intelligence with charts, comparisons, and recommendations.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -208,7 +226,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12"
+            className="max-w-6xl mx-auto bg-white rounded-lg shadow-md p-6 border border-gray-100"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 text-center">Who This Mission Is For</h2>
             <p className="text-center text-gray-700 mb-6">
@@ -250,7 +268,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12 text-center"
+            className="max-w-6xl mx-auto bg-white rounded-lg shadow-md p-6 border border-gray-100 text-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Ready to Ignite the Best Match? 🎯</h2>
             <p className="text-lg text-gray-700 mb-8">

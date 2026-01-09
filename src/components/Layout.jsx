@@ -15,7 +15,7 @@ export default function Layout({ children }) {
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-2xl font-bold text-mission-primary">
-                🎯 Procurement Command Center
+                Project Ignite 🚀
               </span>
             </Link>
             <div className="flex space-x-6">
@@ -57,7 +57,7 @@ export default function Layout({ children }) {
       <footer className="bg-gray-800 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm">
-            Built for AI Foundry · Procurement Command Center ✨
+            Built for AI Foundry · Project Ignite: Procurement Command Centre ✨
           </p>
           <p className="text-xs mt-2 text-gray-400">
             Mission: Ignite the Best Vendor Match 🚀
