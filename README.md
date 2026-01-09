@@ -55,6 +55,35 @@ The production-ready files will be in the `dist` directory.
 npm run preview
 ```
 
+### Deploy to GitHub Pages
+
+1. **Build the project:**
+   ```bash
+   npm run build
+   ```
+
+2. **Deploy the `dist` folder:**
+   - If using a deployment branch, copy the contents of `dist` to your deployment branch
+   - Make sure the base path in `vite.config.js` matches your repository name
+   - For repository `JTC-AI-Hackathon-enablement`, the base path is already set to `/JTC-AI-Hackathon-enablement/`
+
+3. **Update base path if needed:**
+   - Open `vite.config.js`
+   - Change the `basePath` constant to match your GitHub Pages URL
+   - If your site is at `https://username.github.io/repo-name/`, use `/repo-name/`
+   - If deploying to a custom domain at root, use `/`
+
+4. **Important:** After changing the base path, rebuild:
+   ```bash
+   npm run build
+   ```
+
+**Troubleshooting blank page:**
+- Ensure the base path in `vite.config.js` matches your GitHub Pages URL structure
+- Check browser console for 404 errors on assets
+- Verify all files in `dist` folder are committed and pushed
+- Clear browser cache and try again
+
 ## Project Structure
 
 ```
