@@ -55,34 +55,52 @@ The production-ready files will be in the `dist` directory.
 npm run preview
 ```
 
-### Deploy to GitHub Pages
+### Deploy to GitHub Pages (Automated with GitHub Actions)
 
-1. **Build the project:**
-   ```bash
-   npm run build
-   ```
+The repository includes a GitHub Actions workflow that automatically builds and deploys the site when you push to the `main` branch.
 
-2. **Deploy the `dist` folder:**
-   - If using a deployment branch, copy the contents of `dist` to your deployment branch
-   - Make sure the base path in `vite.config.js` matches your repository name
-   - For repository `JTC-AI-Hackathon-enablement`, the base path is already set to `/JTC-AI-Hackathon-enablement/`
+**Setup Steps:**
 
-3. **Update base path if needed:**
-   - Open `vite.config.js`
-   - Change the `basePath` constant to match your GitHub Pages URL
-   - If your site is at `https://username.github.io/repo-name/`, use `/repo-name/`
-   - If deploying to a custom domain at root, use `/`
+1. **Enable GitHub Pages:**
+   - Go to your repository on GitHub
+   - Navigate to **Settings** → **Pages**
+   - Under "Source", select **GitHub Actions**
+   - Save the changes
 
-4. **Important:** After changing the base path, rebuild:
-   ```bash
-   npm run build
-   ```
+2. **Push the workflow file:**
+   - The workflow file is located at `.github/workflows/deploy.yml`
+   - Commit and push the workflow file to the `main` branch:
+     ```bash
+     git add .github/workflows/deploy.yml
+     git commit -m "Add GitHub Actions deployment workflow"
+     git push origin main
+     ```
 
-**Troubleshooting blank page:**
-- Ensure the base path in `vite.config.js` matches your GitHub Pages URL structure
-- Check browser console for 404 errors on assets
-- Verify all files in `dist` folder are committed and pushed
-- Clear browser cache and try again
+3. **Automatic Deployment:**
+   - The workflow will automatically run on every push to `main`
+   - You can also trigger it manually from the **Actions** tab
+   - Once deployed, your site will be available at:
+     `https://zaf24.github.io/JTC-AI-Hackathon-enablement/`
+
+4. **Verify Base Path:**
+   - The base path is configured in `vite.config.js` as `/JTC-AI-Hackathon-enablement/`
+   - If your repository name is different, update the `basePath` in `vite.config.js`
+   - If deploying to a custom domain at root, change base path to `/`
+
+**Manual Deployment (Alternative):**
+
+If you prefer to deploy manually:
+```bash
+npm run build
+# Then copy contents of dist/ folder to your gh-pages branch
+```
+
+**Troubleshooting:**
+
+- **Blank page**: Check browser console (F12) for 404 errors
+- **Images not loading**: Verify base path matches your GitHub Pages URL
+- **Routes not working**: Ensure React Router basename matches the base path
+- **Workflow fails**: Check the Actions tab for error messages
 
 ## Project Structure
 
