@@ -3,6 +3,20 @@ import { motion } from 'framer-motion'
 
 const stages = [
   {
+    id: 0,
+    emoji: '🛠️',
+    name: 'Preparation',
+    callSign: 'Prepare equipments',
+    description: 'Set up the foundation and prepare all necessary resources for the mission.',
+    steps: [
+      {
+        id: '0.1',
+        name: 'Sign in and navigate resource group',
+        description: 'Sign in to Azure and navigate to the resource group.'
+      }
+    ]
+  },
+  {
     id: 1,
     emoji: '🔍',
     name: 'Vendor Scout Agent',
@@ -11,18 +25,18 @@ const stages = [
     steps: [
       {
         id: '1.1',
-        name: 'Set up AI Model and Knowledge Base',
-        description: 'Configure the AI model and populate the knowledge base with vendor profiles and capabilities.'
+        name: 'Provision Model',
+        description: 'Provision the AI model for vendor matching.'
       },
       {
         id: '1.2',
-        name: 'Build Matching Logic',
-        description: 'Create the matching algorithm that scores vendors based on requirements and capabilities.'
+        name: 'Upload instructions and knowledge base',
+        description: 'Upload instructions and populate the knowledge base with vendor profiles and capabilities.'
       },
       {
         id: '1.3',
-        name: 'Test Vendor Matching',
-        description: 'Validate the agent\'s ability to match vendors accurately with test queries.'
+        name: 'Test',
+        description: 'Test the vendor matching agent with sample queries.'
       }
     ]
   },
@@ -35,18 +49,18 @@ const stages = [
     steps: [
       {
         id: '2.1',
-        name: 'Design RFP Email Workflow',
-        description: 'Build a Logic App that sends RFP emails to selected vendors with all necessary details.'
+        name: 'Navigate to logic apps and build workflows',
+        description: 'Navigate to Logic Apps and build the necessary workflows for RFP automation.'
       },
       {
         id: '2.2',
-        name: 'Set Up Response Tracking',
-        description: 'Configure tracking for vendor responses and update the system automatically.'
+        name: 'Create OpenAPI connections',
+        description: 'Create OpenAPI connections for the Logic Apps workflows.'
       },
       {
         id: '2.3',
-        name: 'Build Approval Workflow',
-        description: 'Create an approval workflow that routes vendor selections through the appropriate stakeholders.'
+        name: 'Test',
+        description: 'Test the RFP automation workflows.'
       }
     ]
   },
@@ -131,13 +145,20 @@ export default function Stages() {
                     </td>
                     <td className="px-6 py-4 text-gray-700">
                       <p className="mb-2">{stage.description}</p>
-                      <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">
+                      <div className="flex flex-wrap gap-2 mt-3">
                         {stage.steps.map((step) => (
-                          <li key={step.id}>
+                          <button
+                            key={step.id}
+                            className="px-4 py-2 bg-mission-primary text-white rounded-lg hover:bg-mission-primary/90 transition-colors text-sm font-medium shadow-sm hover:shadow-md"
+                            onClick={() => {
+                              // TODO: Navigate to step detail page
+                              console.log(`Navigate to ${stage.id}.${step.id}: ${step.name}`)
+                            }}
+                          >
                             <span className="font-medium">{step.id}</span> · {step.name}
-                          </li>
+                          </button>
                         ))}
-                      </ul>
+                      </div>
                     </td>
                   </motion.tr>
                 ))}
