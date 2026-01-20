@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const stages = [
@@ -91,6 +91,18 @@ const stages = [
 ]
 
 export default function Stages() {
+  const navigate = useNavigate()
+
+  const handleStepClick = (stageId, stepId, stepName) => {
+    // Navigate to Stage 0 step page
+    if (stageId === 0) {
+      navigate('/stage/0/step')
+    } else {
+      // TODO: Add navigation for other stages when pages are created
+      console.log(`Navigate to ${stageId}.${stepId}: ${stepName}`)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       <section className="section-container pt-16">
@@ -150,12 +162,15 @@ export default function Stages() {
                           <button
                             key={step.id}
                             className="px-4 py-2 bg-mission-primary text-white rounded-lg hover:bg-mission-primary/90 transition-colors text-sm font-medium shadow-sm hover:shadow-md"
-                            onClick={() => {
-                              // TODO: Navigate to step detail page
-                              console.log(`Navigate to ${stage.id}.${step.id}: ${step.name}`)
-                            }}
+                            onClick={() => handleStepClick(stage.id, step.id, step.name)}
                           >
-                            <span className="font-medium">{step.id}</span> · {step.name}
+                            {stage.id === 0 ? (
+                              step.name
+                            ) : (
+                              <>
+                                <span className="font-medium">{step.id}</span> · {step.name}
+                              </>
+                            )}
                           </button>
                         ))}
                       </div>
