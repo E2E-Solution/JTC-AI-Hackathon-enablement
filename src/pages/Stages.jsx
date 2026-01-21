@@ -97,6 +97,14 @@ export default function Stages() {
     // Navigate to Stage 0 step page
     if (stageId === 0) {
       navigate('/stage/0/step')
+    } else if (stageId === 1) {
+      // Navigate to Stage 1 overview or specific step
+      if (stepId === '1.1') {
+        navigate('/stage/1/step/1.1')
+      } else {
+        // For other Stage 1 steps, navigate to overview page
+        navigate('/stage/1')
+      }
     } else {
       // TODO: Add navigation for other stages when pages are created
       console.log(`Navigate to ${stageId}.${stepId}: ${stepName}`)
@@ -149,7 +157,21 @@ export default function Stages() {
                     <td className="px-6 py-4">
                       <div className="text-mission-primary font-semibold flex items-center">
                         <span className="text-2xl mr-2">{stage.emoji}</span>
-                        Stage {stage.id}
+                        {stage.id === 0 ? (
+                          <Link
+                            to="/stage/0/step"
+                            className="hover:underline cursor-pointer"
+                          >
+                            Stage {stage.id}
+                          </Link>
+                        ) : (
+                          <Link
+                            to={`/stage/${stage.id}`}
+                            className="hover:underline cursor-pointer"
+                          >
+                            Stage {stage.id}
+                          </Link>
+                        )}
                       </div>
                     </td>
                     <td className="px-6 py-4 font-medium">

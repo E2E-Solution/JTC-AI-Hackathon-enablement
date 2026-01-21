@@ -234,7 +234,7 @@ export default function Stage0Step() {
                 View All Stages
               </Link>
               <Link
-                to="/stages"
+                to="/stage/1"
                 className="px-6 py-3 bg-blue-600/80 backdrop-blur-sm text-white rounded-lg font-bold text-lg hover:bg-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl border-2 border-blue-400/50 text-center"
               >
                 Continue to Stage 1 →
