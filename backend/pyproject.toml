@@ -1,0 +1,17 @@
+[project]
+name = "hackathon-assistant-backend"
+version = "0.1.0"
+description = "FastAPI backend for the Hackathon Learning Assistant."
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT" }
+
+dependencies = [
+  "fastapi>=0.110.0",
+  "uvicorn[standard]>=0.29.0",
+  "azure-ai-projects>=2.0.0b1",
+  "azure-identity>=1.16.0"
+]
+
+[tool.uv]
+managed = true

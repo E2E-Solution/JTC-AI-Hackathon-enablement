@@ -241,7 +241,7 @@ export default function HackathonAssistant({ stageId, onOpenChange }) {
                 onClick={startNewConversation}
                 className="rounded-md border border-mission-primary px-3 py-1 text-xs font-semibold text-mission-primary transition hover:bg-mission-primary hover:text-white"
               >
-                New conversation
+                New Chat
               </button>
               <button
                 type="button"

@@ -192,6 +192,36 @@ The frontend sends JSON like:
 - The shared key lives in the client bundle, so it should be treated as a lightweight gate, not a secret.
 - The assistant stores `clientId`, `threadId`, `sidebarOpen`, and messages in local storage to persist across pages.
 
+## Assistant Backend (FastAPI)
+
+The backend service integrates with Microsoft Foundry Agent and exposes a single endpoint for the assistant UI.
+
+### Local Run
+
+1. Copy backend/.env.example to backend/.env and update values.
+2. Create the environment and sync from the lockfile:
+  - `uv venv`
+  - `uv pip sync backend/uv.lock`
+3. Run the API:
+  - `uv run uvicorn backend.main:app --reload --port 8000`
+
+### Container Build
+
+1. Build the image:
+  - `docker build -t assistant-backend ./backend`
+2. Run locally:
+  - `docker run -p 8000:8000 --env-file backend/.env assistant-backend`
+
+### Backend Environment Variables
+
+- `AI_PROJECT_ENDPOINT` — Foundry project endpoint.
+- `AGENT_NAME` — Name of the Foundry agent.
+- `AGENT_SHARED_KEY` — Shared key matched to `X-AGENT-KEY`.
+- `RATE_LIMIT_PER_MINUTE` — Requests per minute per client.
+- `CORS_ORIGINS` — Comma-separated origins (use `*` to allow all).
+- `AUTO_APPROVE_TOOLS` — Set to `true` to auto-approve MCP tool calls.
+- `AUTO_APPROVE_TOOL_NAMES` — Optional comma-separated tool names to auto-approve (e.g., `MicrosoftLearn-01`).
+
 ## Future Enhancements
 
 - Individual stage detail pages with step-by-step instructions
