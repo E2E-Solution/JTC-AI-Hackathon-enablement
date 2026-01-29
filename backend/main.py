@@ -5,6 +5,7 @@ from typing import Dict, List, Optional
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
+from dotenv import load_dotenv
 
 from azure.identity import DefaultAzureCredential
 from azure.ai.projects import AIProjectClient
@@ -21,6 +22,9 @@ class AssistantResponse(BaseModel):
   reply: str
   metadata: Optional[dict] = None
 
+
+load_dotenv()
+load_dotenv(".env.local", override=True)
 
 AI_PROJECT_ENDPOINT = os.getenv("AI_PROJECT_ENDPOINT", "")
 AGENT_NAME = os.getenv("AGENT_NAME", "")

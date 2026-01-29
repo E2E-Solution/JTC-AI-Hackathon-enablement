@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 const STORAGE_KEYS = {
   clientId: 'assistant.clientId',
@@ -272,7 +274,15 @@ export default function HackathonAssistant({ stageId, onOpenChange }) {
                     : 'mr-auto bg-gray-100 text-gray-800'
                 }`}
               >
-                {message.content}
+                {message.role === 'assistant' ? (
+                  <div className="prose prose-sm max-w-none prose-p:my-2 prose-ul:my-2 prose-ol:my-2 prose-li:my-1 prose-strong:text-inherit prose-a:text-mission-primary prose-a:underline">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      {message.content}
+                    </ReactMarkdown>
+                  </div>
+                ) : (
+                  message.content
+                )}
               </div>
             ))
           )}
