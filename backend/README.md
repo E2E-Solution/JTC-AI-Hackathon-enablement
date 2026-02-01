@@ -26,7 +26,7 @@ This service uses `uv` for deterministic dependency management.
 Use this script to deploy the backend with Managed Identity (for `DefaultAzureCredential()`).
 
 ```bash
-export SUBSCRIPTION_ID="ff32b3d4-0692-4e68-a2d3-f896637777ac"
+export SUBSCRIPTION_ID="<your-subscription-id>"
 export LOCATION="southeastasia"
 export RG="rg-AI-Hackathon"
 export ENV_NAME="cae-ai-hackathon"
@@ -79,7 +79,7 @@ APP_PRINCIPAL_ID=$(az containerapp identity show -n "$APP_NAME" -g "$RG" --query
 # Set the AI Project resource ID directly if you already know it
 # export AI_PROJECT_RESOURCE_ID="/subscriptions/<sub>/resourceGroups/<rg>/providers/<provider>/<resourceType>/<resourceName>"
 
-export AI_PROJECT_RESOURCE_ID="/subscriptions/ff32b3d4-0692-4e68-a2d3-f896637777ac/resourceGroups/rg-LowCodeAgent-Demo-003/providers/Microsoft.CognitiveServices/accounts/agentflow-003/projects/agentflow-003-projectone"
+export AI_PROJECT_RESOURCE_ID="/subscriptions/<sub>/resourceGroups/<rg>/providers/<provider>/<resourceType>/<resourceName>"
 
 # Or look it up by resource name + type
 # export AI_PROJECT_RESOURCE_NAME="proj-gpt51-codex-resource"
