@@ -47,6 +47,13 @@ export default function HackathonAssistant({ stageId, onOpenChange }) {
     return normalizeEndpoint(import.meta.env.VITE_ASSISTANT_API_ENDPOINT)
   }, [])
 
+  const requestUrl = useMemo(() => {
+    if (!apiEndpoint) return ''
+    return apiEndpoint.endsWith('/api/assistant')
+      ? apiEndpoint
+      : `${apiEndpoint}/api/assistant`
+  }, [apiEndpoint])
+
   const apiKey = useMemo(() => import.meta.env.VITE_ASSISTANT_API_KEY || '', [])
 
   useEffect(() => {
@@ -135,7 +142,7 @@ export default function HackathonAssistant({ stageId, onOpenChange }) {
     const trimmed = messageInput.trim()
     if (!trimmed || isSending) return
 
-    if (!apiEndpoint) {
+    if (!requestUrl) {
       setErrorMessage('Assistant endpoint is not configured.')
       return
     }
@@ -154,7 +161,7 @@ export default function HackathonAssistant({ stageId, onOpenChange }) {
     setMessageInput('')
 
     try {
-      const response = await fetch(apiEndpoint, {
+      const response = await fetch(requestUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
