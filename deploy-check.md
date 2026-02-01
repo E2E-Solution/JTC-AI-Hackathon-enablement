@@ -47,3 +47,10 @@ After deploying, check:
 1. Browser console (F12) - should have no errors
 2. Network tab - all assets should load with 200 status
 3. The URL should match: `https://zaf24.github.io/JTC-AI-Hackathon-enablement/`
+
+## Assistant Backend Notes (Azure Container Apps)
+
+- Configure the backend endpoint in the frontend build with `VITE_ASSISTANT_API_ENDPOINT`.
+- The frontend sends a shared header `X-AGENT-KEY` for lightweight gating.
+- Rate-limiting should be enforced server-side using an ACA environment variable (for example, `RATE_LIMIT_PER_MINUTE`) and applied in your backend service.
+- Ensure `AI_PROJECT_ENDPOINT`, `AGENT_NAME`, and `AGENT_SHARED_KEY` are set in the Container Apps environment.

@@ -1,8 +1,23 @@
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import HackathonAssistant from './HackathonAssistant'
+import { useState } from 'react'
 
 export default function Layout({ children }) {
   const location = useLocation()
+  const [assistantOpen, setAssistantOpen] = useState(false)
+
+  const getStageId = (pathname) => {
+    if (pathname.startsWith('/stage/')) {
+      const parts = pathname.split('/').filter(Boolean)
+      return parts[1] || ''
+    }
+    if (pathname === '/stages') return 'Overview'
+    if (pathname === '/') return 'Mission'
+    return ''
+  }
+
+  const stageId = getStageId(location.pathname)
   
   const isActive = (path) => location.pathname === path || 
     (path === '/' && location.pathname === '/') ||
@@ -44,7 +59,11 @@ export default function Layout({ children }) {
         </div>
       </nav>
 
-      <main className="flex-grow">
+      <main
+        className={`flex-grow transition-[padding] duration-300 ${
+          assistantOpen ? 'lg:pr-[24rem]' : 'lg:pr-0'
+        }`}
+      >
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -53,6 +72,8 @@ export default function Layout({ children }) {
           {children}
         </motion.div>
       </main>
+
+      <HackathonAssistant stageId={stageId} onOpenChange={setAssistantOpen} />
 
       <footer className="bg-gray-800 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
