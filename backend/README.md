@@ -1,4 +1,4 @@
-# Hackathon Assistant Backend
+# AI Procurement Lab Backend
 
 This service uses `uv` for deterministic dependency management.
 
@@ -28,13 +28,13 @@ Use this script to deploy the backend with Managed Identity (for `DefaultAzureCr
 ```bash
 export SUBSCRIPTION_ID="<your-subscription-id>"
 export LOCATION="southeastasia"
-export RG="rg-AI-Hackathon"
-export ENV_NAME="cae-ai-hackathon"
-export APP_NAME="hackathon-backend"
+export RG="rg-ai-lab"
+export ENV_NAME="cae-ai-lab"
+export APP_NAME="lab-backend"
 
-export AI_PROJECT_ENDPOINT="https://proj-gpt51-codex-resource.services.ai.azure.com/api/projects/proj-gpt51-codex"
-export AGENT_NAME="utilit-agents-azure-msft"
-export CORS_ORIGINS="https://e2e-solution.github.io"
+export AI_PROJECT_ENDPOINT="<your-ai-project-endpoint>"
+export AGENT_NAME="<your-agent-name>"
+export CORS_ORIGINS="<your-cors-origins>"
 export AGENT_SHARED_KEY=""  # optional
 
 az login
@@ -53,7 +53,7 @@ az containerapp up \
    -n "$APP_NAME" \
    -g "$RG" \
    --environment "$ENV_NAME" \
-   --source "/workspaces/JTC-AI-Hackathon-enablement/backend" \
+   --source "./backend" \
    --ingress external \
    --target-port 8000
 
@@ -82,7 +82,7 @@ APP_PRINCIPAL_ID=$(az containerapp identity show -n "$APP_NAME" -g "$RG" --query
 export AI_PROJECT_RESOURCE_ID="/subscriptions/<sub>/resourceGroups/<rg>/providers/<provider>/<resourceType>/<resourceName>"
 
 # Or look it up by resource name + type
-# export AI_PROJECT_RESOURCE_NAME="proj-gpt51-codex-resource"
+# export AI_PROJECT_RESOURCE_NAME="<your-ai-project-resource-name>"
 # export AI_PROJECT_RESOURCE_TYPE="Microsoft.MachineLearningServices/workspaces"
 
 # AI_PROJECT_RESOURCE_ID=$(az resource show \

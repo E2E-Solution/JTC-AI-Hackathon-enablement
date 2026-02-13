@@ -29,7 +29,7 @@ When the user indicates intent such as:
 "reach out to them"
 "email the vendor"
 "request a quote"
-Here is the tool calling with OpenAPI for JTCDemo1 endpoint:
+Here is the tool calling with OpenAPI for DemoEndpoint endpoint:
 You must pause execution and move to information‑collection mode.
 Use the email address in the files uploaded by user to retrieve vendor email
 
@@ -200,7 +200,7 @@ Avoid technical jargon unless the user asks for it`
                 <div className="flex-grow">
                   <h3 className="text-2xl font-semibold mb-2">Paste Instructions</h3>
                   <p className="text-gray-700 mb-4">
-                    In the Instructions Tab, paste the instruction below. Do take time to read through it. Under the third instruction you will notice "Here is the tool calling with OpenAPI for JTCDemo1 endpoint:" - This is for you to input in the next stage.
+                    In the Instructions Tab, paste the instruction below. Do take time to read through it. Under the third instruction you will notice "Here is the tool calling with OpenAPI for DemoEndpoint endpoint:" - This is for you to input in the next stage.
                   </p>
                   <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg mb-4">
                     <p className="text-yellow-800 font-semibold mb-2">📋 Copy and Paste Instructions</p>
@@ -230,7 +230,7 @@ Avoid technical jargon unless the user asks for it`
                     <li>Copy the entire instruction text shown above (use the "Copy All" button for convenience)</li>
                     <li>Paste the instruction text into the Instructions field</li>
                     <li>Take time to read through the instructions to understand what the agent will do</li>
-                    <li><strong>Note:</strong> Under the third instruction, you will notice "Here is the tool calling with OpenAPI for JTCDemo1 endpoint:" - This is for you to input in the next stage</li>
+                    <li><strong>Note:</strong> Under the third instruction, you will notice "Here is the tool calling with OpenAPI for DemoEndpoint endpoint:" - This is for you to input in the next stage</li>
                   </ol>
                   <div className="mt-4">
                     <img 

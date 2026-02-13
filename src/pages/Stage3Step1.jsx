@@ -182,17 +182,17 @@ Do not return:
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>In the Code Interpreter configuration, click <strong>Select local files</strong></li>
-                    <li>Choose the file <strong>Vendor_review_JTC_AI_Hackathon.csv</strong> from the course materials</li>
+                    <li>Choose the file <strong>Vendor_review_sample.csv</strong> from the course materials</li>
                     <li>Click <strong>Upload and save</strong> to attach the CSV to the agent</li>
                   </ol>
                   <div className="mt-4">
                     <img 
                       src={`${import.meta.env.BASE_URL}images/stage-3-1-step-4.png`}
-                      alt="Code Interpreter file picker showing Vendor_review_JTC_AI_Hackathon.csv"
+                      alt="Code Interpreter file picker showing Vendor_review_sample.csv"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
                     <p className="text-sm text-gray-500 mt-2 italic">
-                      Figure: Uploading the Vendor_review_JTC_AI_Hackathon.csv file to Code Interpreter.
+                      Figure: Uploading the Vendor_review_sample.csv file to Code Interpreter.
                     </p>
                   </div>
                 </div>
@@ -267,7 +267,7 @@ Do not return:
               </li>
               <li className="flex items-start">
                 <span className="mr-2">☑</span>
-                <span>Uploaded <strong>Vendor_review_JTC_AI_Hackathon.csv</strong> and clicked <strong>Upload and save</strong></span>
+                <span>Uploaded <strong>Vendor_review_sample.csv</strong> and clicked <strong>Upload and save</strong></span>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">☑</span>

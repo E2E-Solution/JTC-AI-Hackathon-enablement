@@ -140,15 +140,15 @@ export default function Stage2Step2() {
             "properties": {
               "name": {
                 "type": "string",
-                "example": "Mohamed Zafir"
+                "example": "Jane Smith"
               },
               "role": {
                 "type": "string",
-                "example": "Solution Engineer"
+                "example": "Procurement Manager"
               },
               "organizationName": {
                 "type": "string",
-                "example": "Microsoft"
+                "example": "Contoso"
               }
             }
           },
@@ -526,7 +526,7 @@ export default function Stage2Step2() {
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>In the Setup pane, navigate to the "Instructions" section</li>
                     <li>Locate step 3 in the instructions (the "Email Intent Detection" section)</li>
-                    <li>Find the line that says: "Here is the tool calling with OpenAPI for JTCDemo1 endpoint:"</li>
+                    <li>Find the line that says: "Here is the tool calling with OpenAPI for DemoEndpoint endpoint:"</li>
                     <li>Replace or add the HTTP URL from your Logic Apps workflow after this line</li>
                     <li>This ensures the agent knows which endpoint to call when sending emails</li>
                   </ol>

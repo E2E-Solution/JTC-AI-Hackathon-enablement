@@ -3,8 +3,8 @@
 ## Quick Fix Steps:
 
 1. **Verify your GitHub Pages URL structure:**
-   - If your site is at: `https://zaf24.github.io/JTC-AI-Hackathon-enablement/`
-   - Then base path should be: `/JTC-AI-Hackathon-enablement/` ✅ (already configured)
+   - If your site is at: `https://<your-github-username>.github.io/ai-procurement-lab/`
+   - Then base path should be: `/ai-procurement-lab/` ✅ (already configured)
 
 2. **Rebuild with correct configuration:**
    ```bash
@@ -14,7 +14,7 @@
 3. **Check the dist folder:**
    - Open `dist/index.html`
    - Verify all script and link tags have the correct base path
-   - Scripts should be like: `/JTC-AI-Hackathon-enablement/assets/...`
+   - Scripts should be like: `/ai-procurement-lab/assets/...`
 
 4. **Deploy the dist folder contents:**
    - Copy ALL contents from `dist` folder to your deployment branch
@@ -46,7 +46,7 @@
 After deploying, check:
 1. Browser console (F12) - should have no errors
 2. Network tab - all assets should load with 200 status
-3. The URL should match: `https://zaf24.github.io/JTC-AI-Hackathon-enablement/`
+3. The URL should match: `https://<your-github-username>.github.io/ai-procurement-lab/`
 
 ## Assistant Backend Notes (Azure Container Apps)
 

@@ -15,7 +15,7 @@ from azure.ai.projects import AIProjectClient
 
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("hackathon-backend")
+logger = logging.getLogger("lab-backend")
 
 
 class AssistantRequest(BaseModel):
@@ -45,7 +45,7 @@ AUTO_APPROVE_TOOL_NAMES = [
   if name.strip()
 ]
 
-app = FastAPI(title="Hackathon Assistant Backend")
+app = FastAPI(title="AI Procurement Lab Backend")
 
 origins = [origin.strip() for origin in CORS_ORIGINS.split(",") if origin.strip()]
 allow_all = "*" in origins or not origins

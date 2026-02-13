@@ -58,12 +58,12 @@ export default function Stage0Step() {
                 <div className="flex-grow">
                   <h3 className="text-2xl font-semibold mb-2">Sign in to Azure Portal</h3>
                   <p className="text-gray-700 mb-4">
-                    Go to the Azure Portal and sign in using your hackathon credentials.
+                    Go to the Azure Portal and sign in using your provided credentials.
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>Open your web browser and go to <a href="https://portal.azure.com" target="_blank" rel="noopener noreferrer" className="text-mission-primary hover:underline">https://portal.azure.com</a></li>
                     <li>You will be prompted to sign in</li>
-                    <li>Sign in using your hackathon credentials</li>
+                    <li>Sign in using your provided credentials</li>
                     <li>You will see the Azure Portal homepage</li>
                   </ol>
                 </div>
@@ -125,7 +125,7 @@ export default function Stage0Step() {
                     <li>Open a new tab or window in your browser</li>
                     <li>Go to <a href="https://ai.azure.com" target="_blank" rel="noopener noreferrer" className="text-mission-primary hover:underline">https://ai.azure.com</a></li>
                     <li>You should be automatically logged in with the same account you used for Azure Portal</li>
-                    <li>If prompted to sign in, use the same hackathon credentials</li>
+                    <li>If prompted to sign in, use the same credentials</li>
                   </ol>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export default function Stage0Step() {
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start">
                 <span className="mr-2">☑</span>
-                <span>Successfully signed in to Azure Portal using hackathon credentials</span>
+                <span>Successfully signed in to Azure Portal using provided credentials</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">☑</span>

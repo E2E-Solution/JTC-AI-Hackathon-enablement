@@ -34,7 +34,7 @@ const getInitialThreads = () => {
   return safeJsonParse(localStorage.getItem(STORAGE_KEYS.threads), {})
 }
 
-export default function HackathonAssistant({ stageId, onOpenChange }) {
+export default function LearningAssistant({ stageId, onOpenChange }) {
   const [isOpen, setIsOpen] = useState(false)
   const [clientId, setClientId] = useState('')
   const [threadId, setThreadId] = useState('')

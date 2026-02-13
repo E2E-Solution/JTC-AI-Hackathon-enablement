@@ -5,7 +5,7 @@ import App from './App.jsx'
 import './index.css'
 
 // Get base path from Vite config
-// Vite's BASE_URL includes trailing slash (e.g., '/JTC-AI-Hackathon-enablement/')
+// Vite's BASE_URL includes trailing slash (e.g., '/ai-procurement-lab/')
 // React Router basename should NOT have trailing slash (except for root '/')
 const baseUrl = import.meta.env.BASE_URL || '/'
 const basename = baseUrl === '/' ? '/' : baseUrl.replace(/\/$/, '')

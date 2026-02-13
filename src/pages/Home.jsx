@@ -20,7 +20,7 @@ export default function Home() {
               transition={{ duration: 0.7 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                🚀 Project Ignite: Procurement Command Centre
+                🚀 AI Procurement Lab: Procurement Command Centre
               </h1>
               <p className="text-xl md:text-2xl mb-4 font-semibold text-blue-200">
                 Mission: Ignite the Best Vendor Match

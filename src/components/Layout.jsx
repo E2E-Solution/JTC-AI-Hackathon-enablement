@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import HackathonAssistant from './HackathonAssistant'
+import LearningAssistant from './LearningAssistant'
 import { useState } from 'react'
 
 export default function Layout({ children }) {
@@ -30,7 +30,7 @@ export default function Layout({ children }) {
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-2xl font-bold text-mission-primary">
-                Project Ignite 🚀
+                AI Procurement Lab 🚀
               </span>
             </Link>
             <div className="flex space-x-6">
@@ -73,12 +73,12 @@ export default function Layout({ children }) {
         </motion.div>
       </main>
 
-      <HackathonAssistant stageId={stageId} onOpenChange={setAssistantOpen} />
+      <LearningAssistant stageId={stageId} onOpenChange={setAssistantOpen} />
 
       <footer className="bg-gray-800 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm">
-            🚀 Project Ignite · Built by Zafir · Solution Engineer, Microsoft 💼
+            🚀 AI Procurement Lab · Hands-On Lab for Azure AI 💼
           </p>
         </div>
       </footer>

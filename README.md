@@ -80,10 +80,10 @@ The repository includes a GitHub Actions workflow that automatically builds and 
    - The workflow will automatically run on every push to `main`
    - You can also trigger it manually from the **Actions** tab
    - Once deployed, your site will be available at:
-     `https://zaf24.github.io/JTC-AI-Hackathon-enablement/`
+     `https://<your-github-username>.github.io/ai-procurement-lab/`
 
 4. **Verify Base Path:**
-   - The base path is configured in `vite.config.js` as `/JTC-AI-Hackathon-enablement/`
+   - The base path is configured in `vite.config.js` as `/ai-procurement-lab/`
    - If your repository name is different, update the `basePath` in `vite.config.js`
    - If deploying to a custom domain at root, change base path to `/`
 
@@ -163,7 +163,7 @@ colors: {
 - **Stages content**: Edit `src/pages/Stages.jsx`
 - **Navigation**: Edit `src/components/Layout.jsx`
 
-## Hackathon Learning Assistant
+## Learning Assistant
 
 This site includes a persistent assistant drawer that can call your Foundry agent backend. The assistant sends a stage identifier derived from the current route and keeps chat history in the browser.
 

@@ -1,7 +1,7 @@
 [project]
-name = "hackathon-assistant-backend"
+name = "ai-procurement-lab-backend"
 version = "0.1.0"
-description = "FastAPI backend for the Hackathon Learning Assistant."
+description = "FastAPI backend for the AI Procurement Lab Learning Assistant."
 requires-python = ">=3.11"
 readme = "README.md"
 license = { text = "MIT" }
